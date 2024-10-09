@@ -13,7 +13,9 @@
     --foreground: #ededed;
   }
 }
-
+#hero{
+  box-shadow: inset 200px -5px 157px -41px rgba(0,0,0,0.75);
+}
 body {
   color: var(--foreground);
   background: var(--background);
