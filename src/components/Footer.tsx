@@ -1,27 +1,47 @@
 import React from "react";
-
+import Facebook from "@mui/icons-material/Facebook";
+import Instagram from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import XIcon from "@mui/icons-material/X";
 export const Footer = () => {
   return (
     <>
       <hr className="my-[100px]" />
       <div className="flex justify-center items-center py-6">
-        <div className="flex justify-between w-[80%] mb-[100px]">
-          <div className="">
+        <div className="flex w-[85%] mb-[100px]">
+          <div className="w-[50%]">
             <h1>Logo</h1>
-            <h2>(+976)99999999</h2>
-            <h2>some@gmail.com</h2>
+            <h2>(976)8008 2819</h2>
+            <h2>Goolife@wholesomefoods.mn</h2>
           </div>
-          <div>
+          <div className="flex flex-col justify-start">
             <h1>Our Office</h1>
-            <h2>
-              #404, 4th floor, Park Place, 1st khoroo, Sukhbaatar district, UB
-              14241, Mongolia
-            </h2>
-            <div>
-              <a href="">Fb</a>
-              <a href="">Fb</a>
-              <a href="">Fb</a>
-              <a href="">Fb</a>
+            <h2>ХУД, Ulaanbaatar, Mongolia, 107060</h2>
+            <div className="flex gap-4">
+              <a
+                href="https://www.facebook.com/profile.php?id=61551878740890"
+                target="blank"
+              >
+                <Facebook className="w-8 h-8" />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61551878740890"
+                target="blank"
+              >
+                <Instagram className="w-8 h-8" />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61551878740890"
+                target="blank"
+              >
+                <LinkedInIcon className="w-8 h-8" />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61551878740890"
+                target="blank"
+              >
+                <XIcon className="w-8 h-8" />
+              </a>
             </div>
           </div>
         </div>
