@@ -15,19 +15,19 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <div className="flex justify-center items-center py-6">
-      <div className="flex justify-between w-[80%]">
+      <div className="flex justify-between w-[85%]">
         <a href="#" onClick={scrollToHero}>
           Home
         </a>
         <a href="#" onClick={scrollToProduct}>
           Our Products
         </a>
-        <img className="w-18 h-16" src="../logo.png" alt="" />
+        <img className="w-18 h-16" src="../logo.png" alt="logo" />
         <a href="#" onClick={scrollToContact}>
-          Home
+          Contact us
         </a>
         <a href="#" onClick={scrollToFooter}>
-          Contact us
+          Info
         </a>
       </div>
     </div>

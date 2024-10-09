@@ -4,7 +4,7 @@ import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
 import { Products } from "@/components/Products";
 import Head from "next/head";
-import Image from "next/image";
+
 
 export default function Home() {
   const scrollToHero = () => {
@@ -38,7 +38,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>GooLife Lores</title>
+        <title>GooLife</title>
         <meta name="description" content="Goolife" key="desc" />
         <meta property="og:image" content="goolife.png" />
         <link

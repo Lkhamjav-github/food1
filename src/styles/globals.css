@@ -16,6 +16,13 @@
 #hero{
   box-shadow: inset 200px -5px 157px -41px rgba(0,0,0,0.75);
 }
+
+#cinzel {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
 body {
   color: var(--foreground);
   background: var(--background);

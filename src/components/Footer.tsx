@@ -6,17 +6,24 @@ import XIcon from "@mui/icons-material/X";
 export const Footer = () => {
   return (
     <>
-      <hr className="my-[100px]" />
+      <hr id="footer" className="my-[100px]" />
       <div className="flex justify-center items-center py-6">
         <div className="flex w-[85%] mb-[100px]">
           <div className="w-[50%]">
-            <h1>Logo</h1>
-            <h2>(976)8008 2819</h2>
-            <h2>Goolife@wholesomefoods.mn</h2>
+            <div className="flex pb-2">
+              <img className="w-20 h-18" src="../leaf.png" alt="logo" />
+              <h1 id="cinzel" className="font-cinzel text-4xl text-[#283995]">
+                GOOLIFE
+              </h1>
+            </div>
+            <h2 className="py-4 font-sans text-[16px]">(976)8008 2819</h2>
+            <h2 className="font-sans text-[16px]">Goolife@wholesomefoods.mn</h2>
           </div>
           <div className="flex flex-col justify-start">
-            <h1>Our Office</h1>
-            <h2>ХУД, Ulaanbaatar, Mongolia, 107060</h2>
+            <h1 className="text-4xl">Our Office</h1>
+            <h2 className="py-4 font-sans text-[16px]">
+              ХУД, Ulaanbaatar, Mongolia, 107060
+            </h2>
             <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/profile.php?id=61551878740890"

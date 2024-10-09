@@ -28,7 +28,7 @@ const ContactSchema = Yup.object().shape({
 
 const Contact = () => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div id="contact" className="flex flex-col items-center justify-center">
       <h1 className="text-[34px]">Contact Us</h1>
       <Formik
         initialValues={{
