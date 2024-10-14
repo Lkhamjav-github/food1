@@ -15,7 +15,7 @@ export const Header: React.FC<HeaderProps> = ({
 }) => {
   return (
     <div className="flex justify-center items-center py-6">
-      <div className="flex justify-between w-[85%]">
+      <div className="flex justify-between w-[85%] flex-wrap">
         <a href="#" onClick={scrollToHero}>
           Home
         </a>

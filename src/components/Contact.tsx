@@ -59,7 +59,7 @@ const Contact = () => {
           errors,
           touched,
         }) => (
-          <Form className="mt-4 flex-col justify-center items-center flex w-[446px] gap-4">
+          <Form className="mt-4 flex-col justify-center items-center flex w-[320px] md:w-[446px]  gap-4">
             <div className="flex w-full justify-between gap-3">
               <TextField
                 label="First Name"
