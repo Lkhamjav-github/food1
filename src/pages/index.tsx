@@ -5,7 +5,6 @@ import { Hero } from "@/components/Hero";
 import { Products } from "@/components/Products";
 import Head from "next/head";
 
-
 export default function Home() {
   const scrollToHero = () => {
     const heroElement = document.getElementById("hero");
@@ -45,7 +44,7 @@ export default function Home() {
           className="rounded-full"
           rel="icon"
           type="/logo.png"
-          href="https://scontent.fuln6-2.fna.fbcdn.net/v/t39.30808-6/441059849_122162920268062624_593798740616597924_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=b_ALVjlB08oQ7kNvgHs6qYJ&_nc_ht=scontent.fuln6-2.fna&_nc_gid=Axw3NbtxYD8HQVC4gEvlJjh&oh=00_AYDrKzgsJQ4AJTUnqEc2DVpXaZOWV3hUiTsG-PNHvnO5xQ&oe=670C2011"
+          href="https://scontent.fuln6-2.fna.fbcdn.net/v/t39.30808-6/441059849_122162920268062624_593798740616597924_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=SYUPSI0W5TwQ7kNvgFM16d3&_nc_zt=23&_nc_ht=scontent.fuln6-2.fna&_nc_gid=AO93BCqUEIwwQzhpQl6MyEu&oh=00_AYBozfGsg1YO3mC8JDD42hUaKwq0OxlMSLk5pBODDc308w&oe=6717FD91"
         ></link>
       </Head>
       <Header

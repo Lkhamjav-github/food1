@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { TextField, Button, CircularProgress } from "@mui/material";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import { sendContactForm } from "../lib/api";
+import { sendContactForm } from "../pages/api/lib/api";
 
 const ContactSchema = Yup.object().shape({
   firstName: Yup.string()
@@ -30,6 +30,7 @@ const Contact = () => {
   return (
     <div id="contact" className="flex flex-col items-center justify-center">
       <h1 className="text-[34px]">Contact Us</h1>
+
       <Formik
         initialValues={{
           firstName: "",
@@ -39,10 +40,19 @@ const Contact = () => {
           message: "",
         }}
         validationSchema={ContactSchema}
-        onSubmit={async (values, { setSubmitting }) => {
+        onSubmit={async (values, { setSubmitting, resetForm }) => {
           try {
-            await sendContactForm(values);
+            const formData = {
+              firstName: values.firstName,
+              lastName: values.lastName,
+              email: values.email,
+              phone: values.phone,
+              message: values.message,
+            };
+
+            await sendContactForm(formData);
             alert("Form submitted successfully!");
+            resetForm();
           } catch (error) {
             console.error("Error submitting form:", error);
             alert("Error submitting form. Please try again.");

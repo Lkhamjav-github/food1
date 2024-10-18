@@ -1,11 +1,14 @@
-// lib/api.js or lib/api.ts
+// import { useState } from "react";
+
 interface ContactFormData {
   firstName: string;
   lastName: string;
   email: string;
   phone: string;
   message: string;
+
 }
+
 export const sendContactForm = async (data: ContactFormData) => {
   try {
     const response = await fetch('/api/contact', {
@@ -22,9 +25,9 @@ export const sendContactForm = async (data: ContactFormData) => {
     }
 
     const result = await response.json();
-    return result; // Return the result if needed for further handling
+    return result;
   } catch (error) {
     console.error('Error sending contact form:', error);
-    throw error; // Rethrow error for further handling if necessary
+    throw error;
   }
 };
