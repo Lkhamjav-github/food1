@@ -7,7 +7,7 @@ export const Hero = () => {
         <img
           id="hero"
           className="w-full rounded-3xl"
-          src="https://scontent.fuln6-2.fna.fbcdn.net/v/t39.30808-6/436316577_122162919626062624_1898481491216921094_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=IeHKr7Gv24YQ7kNvgHqR-98&_nc_ht=scontent.fuln6-2.fna&_nc_gid=APAJm-0-zQWlT7AwMlmArB8&oh=00_AYDyi7JA0lE1cJd8I8A7IxHOWCKyIXWfp5QqttC0nHLqdA&oe=670C0CB3"
+          src="https://scontent.fuln6-2.fna.fbcdn.net/v/t39.30808-6/436316577_122162919626062624_1898481491216921094_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=5FIf__zeTFcQ7kNvgHXH7-6&_nc_zt=23&_nc_ht=scontent.fuln6-2.fna&_nc_gid=AOBbvyhoi1iVXqFKz7TOmdh&oh=00_AYBRWskit2WCZOKrzQ7KLaxMAsg3H_Oj86hAXiNvIZpVAg&oe=6717EA33"
           alt="Food"
         />
         <div className="absolute pl-[5%] pt-[5%] h-full ">
