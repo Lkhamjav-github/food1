@@ -1,4 +1,3 @@
-// api/contact.ts
 import type { NextApiRequest, NextApiResponse } from "next";
 import { transporter, mailOptions } from "./config/nodemailer"; // Adjust the path as necessary
 
@@ -17,7 +16,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
     if (!firstName || !lastName || !email || !message) {
       return res.status(400).json({ message: "All fields are required." });
     }
-    console.log("Received data:", data);
 
     try {
       await transporter.sendMail({
@@ -35,7 +33,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
       return res.status(200).json({ success: true });
 
     } catch (error) {
-      console.error("Error sending email:", error);
       return res.status(500).json({ message: "Error sending email: " + (error instanceof Error ? error.message : "Unknown error") });
     }
   }

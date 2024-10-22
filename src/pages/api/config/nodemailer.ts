@@ -1,33 +1,25 @@
 import nodemailer from 'nodemailer';
 
-// Орчны хувьсагчдыг импортлох
 const email = process.env.EMAIL;
 const pass = process.env.EMAIL_PASS;
 
-// Орчны хувьсагчид зөв ачаалагдсан эсэхийг шалгах
-console.log('Email:', email);
-console.log('Password:', pass);
-
-// Nodemailer-ийн транспортыг тохируулах
 export const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com', // Gmail SMTP серверийн хост
-  port: 465, // SSL-д зориулсан порт (465 бол secure port)
-  secure: true, // true бол SSL ашиглана гэсэн үг
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
   auth: {
-    user: email, // Таны имэйл
-    pass: pass,  // Таны имэйл нууц үг эсвэл App password
+    user: email,
+    pass: pass,  
   },
 });
 
-// И-мэйл илгээх тохиргоо
 export const mailOptions = {
-  from: email, // Имэйл хаяг илгээгч талд гарна
-  to: email, // Хүлээн авагч талд таны имэйл хаяг
-  subject: 'Тест и-мэйл', // Сэдэв
-  text: 'Энэ бол тест и-мэйл юм!', // Энгийн текст агуулга
+  from: email, 
+  to: email, 
+  subject: 'Тест и-мэйл',
+  text: 'Энэ бол тест и-мэйл юм!',
 };
 
-// И-мэйл илгээх функц
 export const sendEmail = async () => {
   try {
     const info = await transporter.sendMail(mailOptions);

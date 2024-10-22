@@ -1,5 +1,3 @@
-// api/lib/api.ts
-
 interface ContactFormData {
   firstName: string;
   lastName: string;
@@ -19,15 +17,13 @@ export const sendContactForm = async (data: ContactFormData) => {
       },
     });
 
-    // Check if the response is ok (status in the range 200-299)
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.statusText}`);
     }
 
     const result = await response.json();
-    return result; // Return the response from the API
+    return result;
   } catch (error) {
-    console.error('Error sending contact form:', error);
-    throw error; // Re-throw the error to be handled by the caller
+    throw error;
   }
 };

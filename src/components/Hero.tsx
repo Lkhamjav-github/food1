@@ -16,7 +16,6 @@ export const Hero = () => {
             <h2 className="text-[#283995] font-firesans  text-[16px] font-bold ">
               +976 77102222
             </h2>
-            {/* <img className="w-[256px]" src="./fb.png" alt="" /> */}
           </div>
         </div>
       </div>
