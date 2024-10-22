@@ -196,7 +196,7 @@ const Contact = () => {
               sx={{
                 "& .MuiOutlinedInput-root": {
                   "& fieldset": {
-                    borderRadius: "0px", // Remove border radius
+                    borderRadius: "0px", 
                   },
                   "&.Mui-focused fieldset": {
                     borderColor: "#08b89d",
@@ -268,7 +268,7 @@ const Contact = () => {
               }
               variant="contained"
               sx={{
-                backgroundColor: isSubmitting ? "lightgreen" : "#283995",
+                backgroundColor: isSubmitting ? "#08b89d" : "#283995",
                 "&:disabled": {
                   cursor: "not-allowed",
                   backgroundColor: "lightgray",
