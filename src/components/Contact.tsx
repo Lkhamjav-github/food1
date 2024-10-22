@@ -82,16 +82,21 @@ const Contact = () => {
                 error={Boolean(touched.firstName && errors.firstName)}
                 helperText={touched.firstName && errors.firstName}
                 sx={{
-                  "& .MuiInputLabel-root": {
-                    color: "gray",
-                  },
                   "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderRadius: "0px", // Remove border radius
+                    },
                     "&.Mui-focused fieldset": {
                       borderColor: "green",
+                      borderRadius: "0px",
                     },
                     "&:hover fieldset": {
                       borderColor: "green",
+                      borderRadius: "0px",
                     },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "gray",
                   },
                   "& .MuiInputLabel-root.Mui-focused": {
                     color: "green",
@@ -113,16 +118,21 @@ const Contact = () => {
                 error={Boolean(touched.lastName && errors.lastName)}
                 helperText={touched.lastName && errors.lastName}
                 sx={{
-                  "& .MuiInputLabel-root": {
-                    color: "gray",
-                  },
                   "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderRadius: "0px", // Remove border radius
+                    },
                     "&.Mui-focused fieldset": {
                       borderColor: "green",
+                      borderRadius: "0px",
                     },
                     "&:hover fieldset": {
                       borderColor: "green",
+                      borderRadius: "0px",
                     },
+                  },
+                  "& .MuiInputLabel-root": {
+                    color: "gray",
                   },
                   "& .MuiInputLabel-root.Mui-focused": {
                     color: "green",
@@ -145,16 +155,21 @@ const Contact = () => {
               error={Boolean(touched.email && errors.email)}
               helperText={touched.email && errors.email}
               sx={{
-                "& .MuiInputLabel-root": {
-                  color: "gray",
-                },
                 "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderRadius: "0px", // Remove border radius
+                  },
                   "&.Mui-focused fieldset": {
                     borderColor: "green",
+                    borderRadius: "0px",
                   },
                   "&:hover fieldset": {
                     borderColor: "green",
+                    borderRadius: "0px",
                   },
+                },
+                "& .MuiInputLabel-root": {
+                  color: "gray",
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
                   color: "green",
@@ -164,7 +179,6 @@ const Contact = () => {
                 },
               }}
             />
-
             <TextField
               label="Phone Number"
               name="phone"
@@ -176,26 +190,30 @@ const Contact = () => {
               error={Boolean(touched.phone && errors.phone)}
               helperText={touched.phone && errors.phone}
               sx={{
-                "& .MuiInputLabel-root": {
-                  color: "gray", // Default label color
-                },
                 "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderRadius: "0px", // Remove border radius
+                  },
                   "&.Mui-focused fieldset": {
-                    borderColor: "green", // Change border color when focused
+                    borderColor: "green",
+                    borderRadius: "0px",
                   },
                   "&:hover fieldset": {
-                    borderColor: "green", // Change border color when hovered
+                    borderColor: "green",
+                    borderRadius: "0px",
                   },
                 },
+                "& .MuiInputLabel-root": {
+                  color: "gray",
+                },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "green", // Change label color when focused
+                  color: "green",
                 },
                 "& .MuiInputLabel-root:hover": {
-                  color: "green", // Change label color when hovered
+                  color: "green",
                 },
               }}
             />
-
             <TextField
               label="Message"
               name="message"
@@ -209,16 +227,21 @@ const Contact = () => {
               error={Boolean(touched.message && errors.message)}
               helperText={touched.message && errors.message}
               sx={{
-                "& .MuiInputLabel-root": {
-                  color: "gray",
-                },
                 "& .MuiOutlinedInput-root": {
+                  "& fieldset": {
+                    borderRadius: "0px", // Remove border radius
+                  },
                   "&.Mui-focused fieldset": {
                     borderColor: "green",
+                    borderRadius: "0px",
                   },
                   "&:hover fieldset": {
                     borderColor: "green",
+                    borderRadius: "0px",
                   },
+                },
+                "& .MuiInputLabel-root": {
+                  color: "gray",
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
                   color: "green",
@@ -230,7 +253,7 @@ const Contact = () => {
             />
 
             <Button
-              className="font-bold text-white h-[36.5px]"
+              className="font-bold text-white w-full rounded-none h-[36.5px]"
               type="submit"
               disabled={
                 Boolean(touched.message && errors.message) ||

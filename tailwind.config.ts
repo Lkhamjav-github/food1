@@ -13,6 +13,10 @@ const config: Config = {
         foreground: "var(--foreground)",
         logom: "#08b89d"
       },
+      fontFamily: {
+        geeks: ['Geeks', 'sans-serif'],
+        firesans: ['Firesans', 'sans-serif'],
+      },
     },
   },
   plugins: [],

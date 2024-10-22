@@ -1,7 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'Geeks';
+  src: url('../pages/fonts/geeks.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'firesans';
+  src: url('../pages/fonts/firesans.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
+html, body {
+  font-family: 'Geeks', sans-serif;
+  font-family: 'Firesans', sans-serif;
+
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
