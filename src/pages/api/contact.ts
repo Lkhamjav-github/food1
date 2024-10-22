@@ -1,43 +1,51 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { sendContactForm } from "../api/lib/api";
-import { transporter, mailOptions } from "./config/nodemailer";
+import { transporter, mailOptions } from "./config/nodemailer"; // Adjust the path as necessary
+
 type Data = {
-  name?: string;
   message?: string;
   success?: boolean;
 };
-console.log(sendContactForm)
+
 const handler = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
+  // Only handle POST requests
   if (req.method === "POST") {
     const data = req.body;
     const { firstName, lastName, email, phone, message, subject } = data;
-    if (!sendContactForm) {
-      return res.status(400).json({ message: "Bad request contact form" });
+
+    // Check if required fields are provided
+    if (!firstName || !lastName || !email || !message) {
+      return res.status(400).json({ message: "All fields are required." });
     }
+
+    // Log the incoming data for debugging
+    console.log("Received data:", data);
+
     try {
       await transporter.sendMail({
         ...mailOptions,
         subject: subject || "New Contact Form Submission",
-        text: `FirstName: ${firstName}\nLastName: ${lastName}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`, // Имэйл текст
+        text: `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`,
         html: `<h1>Contact Form Submission</h1>
-        <p><strong>FirstName:</strong> ${firstName}</p>
-        <p><strong>LastName:</strong> ${lastName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong> ${message}</p>`,
-      })
-      return res.status(200).json({ success: true })
+               <p><strong>First Name:</strong> ${firstName}</p>
+               <p><strong>Last Name:</strong> ${lastName}</p>
+               <p><strong>Email:</strong> ${email}</p>
+               <p><strong>Phone:</strong> ${phone}</p>
+               <p><strong>Message:</strong> ${message}</p>`,
+      });
 
-    }
-    catch (error) {
+      return res.status(200).json({ success: true });
+
+    } catch (error) {
+      console.error("Error sending email:", error);
       if (error instanceof Error) {
-        console.log(error.message);
-        return res.status(400).json({ message: error.message });
-      } else {
-        return res.status(400).json({ message: "Unknown error occurred" });
+        return res.status(500).json({ message: error.message });
       }
+      return res.status(500).json({ message: "Unknown error occurred" });
     }
   }
-  return res.status(400).json({ message: "Bad run request" })
-}
+
+  // Return 405 for unsupported methods
+  return res.status(405).json({ message: "Method not allowed" });
+};
+
 export default handler;
