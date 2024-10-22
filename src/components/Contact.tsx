@@ -28,9 +28,13 @@ const ContactSchema = Yup.object().shape({
 
 const Contact = () => {
   return (
-    <div id="contact" className="flex flex-col items-center justify-center">
-      <h1 className="text-[34px]">Contact Us</h1>
-
+    <div
+      id="contact"
+      className="flex flex-col items-center justify-center pb-6"
+    >
+      <h1 className="font-bold text-4xl text-[#283995] font-firesans pb-4">
+        Contact Us
+      </h1>
       <Formik
         initialValues={{
           firstName: "",
@@ -87,11 +91,11 @@ const Contact = () => {
                       borderRadius: "0px", // Remove border radius
                     },
                     "&.Mui-focused fieldset": {
-                      borderColor: "green",
+                      borderColor: "#08b89d",
                       borderRadius: "0px",
                     },
                     "&:hover fieldset": {
-                      borderColor: "green",
+                      borderColor: "#08b89d",
                       borderRadius: "0px",
                     },
                   },
@@ -99,10 +103,10 @@ const Contact = () => {
                     color: "gray",
                   },
                   "& .MuiInputLabel-root.Mui-focused": {
-                    color: "green",
+                    color: "#08b89d",
                   },
                   "& .MuiInputLabel-root:hover": {
-                    color: "green",
+                    color: "#08b89d",
                   },
                 }}
               />
@@ -123,11 +127,11 @@ const Contact = () => {
                       borderRadius: "0px", // Remove border radius
                     },
                     "&.Mui-focused fieldset": {
-                      borderColor: "green",
+                      borderColor: "#08b89d",
                       borderRadius: "0px",
                     },
                     "&:hover fieldset": {
-                      borderColor: "green",
+                      borderColor: "#08b89d",
                       borderRadius: "0px",
                     },
                   },
@@ -135,10 +139,10 @@ const Contact = () => {
                     color: "gray",
                   },
                   "& .MuiInputLabel-root.Mui-focused": {
-                    color: "green",
+                    color: "#08b89d",
                   },
                   "& .MuiInputLabel-root:hover": {
-                    color: "green",
+                    color: "#08b89d",
                   },
                 }}
               />
@@ -160,11 +164,11 @@ const Contact = () => {
                     borderRadius: "0px", // Remove border radius
                   },
                   "&.Mui-focused fieldset": {
-                    borderColor: "green",
+                    borderColor: "#08b89d",
                     borderRadius: "0px",
                   },
                   "&:hover fieldset": {
-                    borderColor: "green",
+                    borderColor: "#08b89d",
                     borderRadius: "0px",
                   },
                 },
@@ -172,10 +176,10 @@ const Contact = () => {
                   color: "gray",
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "green",
+                  color: "#08b89d",
                 },
                 "& .MuiInputLabel-root:hover": {
-                  color: "green",
+                  color: "#08b89d",
                 },
               }}
             />
@@ -195,11 +199,11 @@ const Contact = () => {
                     borderRadius: "0px", // Remove border radius
                   },
                   "&.Mui-focused fieldset": {
-                    borderColor: "green",
+                    borderColor: "#08b89d",
                     borderRadius: "0px",
                   },
                   "&:hover fieldset": {
-                    borderColor: "green",
+                    borderColor: "#08b89d",
                     borderRadius: "0px",
                   },
                 },
@@ -207,10 +211,10 @@ const Contact = () => {
                   color: "gray",
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "green",
+                  color: "#08b89d",
                 },
                 "& .MuiInputLabel-root:hover": {
-                  color: "green",
+                  color: "#08b89d",
                 },
               }}
             />
@@ -232,11 +236,11 @@ const Contact = () => {
                     borderRadius: "0px", // Remove border radius
                   },
                   "&.Mui-focused fieldset": {
-                    borderColor: "green",
+                    borderColor: "#08b89d",
                     borderRadius: "0px",
                   },
                   "&:hover fieldset": {
-                    borderColor: "green",
+                    borderColor: "#08b89d",
                     borderRadius: "0px",
                   },
                 },
@@ -244,10 +248,10 @@ const Contact = () => {
                   color: "gray",
                 },
                 "& .MuiInputLabel-root.Mui-focused": {
-                  color: "green",
+                  color: "#08b89d",
                 },
                 "& .MuiInputLabel-root:hover": {
-                  color: "green",
+                  color: "#08b89d",
                 },
               }}
             />
@@ -264,10 +268,7 @@ const Contact = () => {
               }
               variant="contained"
               sx={{
-                backgroundColor: isSubmitting ? "lightgreen" : "green",
-                "&:hover": {
-                  backgroundColor: "darkgreen",
-                },
+                backgroundColor: isSubmitting ? "lightgreen" : "#283995",
                 "&:disabled": {
                   cursor: "not-allowed",
                   backgroundColor: "lightgray",

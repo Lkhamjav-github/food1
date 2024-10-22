@@ -11,7 +11,12 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        logom: "#08b89d"
+        green: '#08b89d',
+      },
+
+      backgroundImage: {
+        'hero-pattern': "url('/goolifelores1.avif')",
+        'footer-texture': "url('/img/footer-texture.png')",
       },
       fontFamily: {
         geeks: ['Geeks', 'sans-serif'],

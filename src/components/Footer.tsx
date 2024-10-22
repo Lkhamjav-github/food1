@@ -6,7 +6,7 @@ import XIcon from "@mui/icons-material/X";
 export const Footer = () => {
   return (
     <>
-      <hr id="footer" className="mt-[80px]" />
+      <hr id="footer" className="mt-6" />
       {/* <div className="flex justify-center  items-center py-6">
         <div className="flex flex-col md:flex-row w-[85%] mb-[100px]">
           <div className="w-[50%]">

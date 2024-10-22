@@ -2,9 +2,11 @@ import React from "react";
 
 export const Products = () => {
   return (
-    <div id="product" className="flex justify-center items-center py-6">
+    <div id="product" className="flex justify-center items-center pb-6">
       <div className="flex justify-between flex-col w-[85%]">
-        <h1 className="font-bold text-4xl pb-4">Our Products</h1>
+        <h1 className="font-bold text-4xl text-[#283995] font-firesans pb-4">
+          Our Products
+        </h1>
         <div className="flex justify-between">
           <img
             className="w-[32%]"
