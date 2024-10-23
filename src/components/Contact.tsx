@@ -294,6 +294,7 @@ const Contact = () => {
                     backgroundColor: "lightgray",
                     color: "darkgray",
                   },
+                  boxShadow: "none",
                 }}
               >
                 {isSubmitting ? (

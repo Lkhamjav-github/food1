@@ -1,5 +1,11 @@
 import React from "react";
-import { Typography, CardMedia, ThemeProvider, Stack } from "@mui/material";
+import {
+  Box,
+  Typography,
+  CardMedia,
+  ThemeProvider,
+  Stack,
+} from "@mui/material";
 import theme from "@/theme/mui.theme";
 
 export const Products = () => {
@@ -25,7 +31,12 @@ export const Products = () => {
           >
             Our Products
           </Typography>
-          <Stack justifyContent={"space-between"}>
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
             <CardMedia
               component="img"
               sx={{ width: "32%" }}
@@ -44,7 +55,7 @@ export const Products = () => {
               image="https://scontent.fuln6-1.fna.fbcdn.net/v/t39.30808-6/440125519_7429249453796704_4548696286767984926_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=833d8c&_nc_ohc=wA3NXzkMbCcQ7kNvgGYVg_V&_nc_zt=23&_nc_ht=scontent.fuln6-1.fna&_nc_gid=AgIO8ybtoYvfz5d6q3fbSNE&oh=00_AYDMbOqdWHjA2CisiygS--0vbIAQsBQGtnpmjKrlSw96uA&oe=671BFCD3"
               alt="food image"
             />
-          </Stack>
+          </Box>
         </Stack>
       </Stack>
     </ThemeProvider>
