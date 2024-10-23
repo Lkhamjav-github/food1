@@ -4,18 +4,18 @@ const email = process.env.EMAIL;
 const pass = process.env.EMAIL_PASS;
 
 export const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
+  host: 'smtp.mail.us-east-1.awsapps.com',
   port: 465,
   secure: true,
   auth: {
     user: email,
-    pass: pass,  
+    pass: pass,
   },
 });
 
 export const mailOptions = {
-  from: email, 
-  to: email, 
+  from: email,
+  to: email,
   subject: 'Тест и-мэйл',
   text: 'Энэ бол тест и-мэйл юм!',
 };

@@ -2,6 +2,7 @@ import Contact from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Products } from "@/components/Products";
+import { Box, Stack } from "@mui/material";
 import Head from "next/head";
 
 export default function Home() {
@@ -16,12 +17,14 @@ export default function Home() {
           rel="icon"
           type="/goolife2.png"
           href="/goolife2.png"
-        ></link>
+        />
       </Head>
-      <Hero />
-      <Products />
-      <Contact />
-      <Footer />
+      <Stack gap={16}>
+        <Hero />
+        <Products />
+        <Contact />
+        <Footer />
+      </Stack>
     </>
   );
 }

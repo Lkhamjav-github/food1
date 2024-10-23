@@ -1,24 +1,79 @@
+import theme from "@/theme/mui.theme";
+import { Box, Stack, ThemeProvider, Typography } from "@mui/material";
 import React from "react";
 
 export const Hero = () => {
   return (
-    <div className="flex justify-center items-center pb-6">
-      <div className="flex justify-between w-[100%] h-[100vh]">
-        <div className="items-center flex w-full h-full flex-col bg-[url('/goolifelores1.avif')] bg-cover bg-bottom">
-          <img className="w-[120px] h-24 mt-4" src="../logo.png" alt="logo" />
-          <h1 className="text-green pt-3 font-geeks font-bold text-[16px] sm:text-[24px] md:text-[48px]">
-            Good food, Good mood
-          </h1>
-          <div className="w-[90%] h-full flex flex-col justify-end items-end pb-12">
-            <h2 className="text-[#283995] font-firesans  text-[16px] font-bold ">
-              hello@goolifelores.mn
-            </h2>
-            <h2 className="text-[#283995] font-firesans  text-[16px] font-bold ">
-              +976 77102222
-            </h2>
-          </div>
-        </div>
-      </div>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <Stack justifyContent={"center"} alignItems={"center"}>
+          <Stack
+            justifyContent={"space-between"}
+            sx={{ width: "100%", height: "100dvh" }}
+          >
+            <Stack
+              alignItems={"center"}
+              sx={{
+                width: "100%",
+                height: "100%",
+                backgroundImage: "url('/goolifelores1.avif')",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: { xl: "cover", xs: "bottom" },
+              }}
+            >
+              <Box
+                component="img"
+                src="../logo.png"
+                alt="logo"
+                sx={{ width: "120px", height: "96px", mt: 4 }}
+              />
+              <Typography
+                variant="h1"
+                fontSize={{ xs: "16px", sm: "24px", md: "48px" }}
+                sx={{
+                  color: "primary.main",
+                  pt: 3,
+                  fontFamily: "geeks",
+                  fontWeight: "bold",
+                }}
+              >
+                Good food, Good mood
+              </Typography>
+              <Box
+                sx={{
+                  width: "90%",
+                  height: "100%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "flex-end",
+                  alignItems: "flex-end",
+                  paddingBottom: "12px",
+                }}
+              >
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: theme.palette.Blue.main,
+                    fontFamily: "firesans",
+                  }}
+                >
+                  hello@goolifelores.mn
+                </Typography>
+                <Typography
+                  variant="body1"
+                  sx={{
+                    color: theme.palette.Blue.main,
+                    fontFamily: "firesans",
+                  }}
+                >
+                  +976 77102222
+                </Typography>
+              </Box>
+            </Stack>
+          </Stack>
+        </Stack>
+      </ThemeProvider>
+    </>
   );
 };
