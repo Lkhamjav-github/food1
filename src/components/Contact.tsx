@@ -45,16 +45,7 @@ const Contact = () => {
           justifyContent: "center",
         }}
       >
-        <Typography
-          variant="h4"
-          paddingBottom={6}
-          sx={{
-            fontWeight: "bold",
-            fontFamily: "firesans",
-          }}
-        >
-          Contact Us
-        </Typography>
+        <Typography variant="h4">Contact Us</Typography>
         <Formik
           initialValues={{
             firstName: "",

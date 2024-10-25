@@ -27,18 +27,7 @@ export const Hero = () => {
               alt="logo"
               sx={{ width: "120px", height: "96px", mt: 4 }}
             />
-            <Typography
-              variant="h1"
-              fontSize={{ xs: "16px", sm: "24px", md: "48px" }}
-              sx={{
-                color: "primary.main",
-                pt: 3,
-                fontFamily: "geeks",
-                fontWeight: "bold",
-              }}
-            >
-              Good food, Good mood
-            </Typography>
+            <Typography variant="h1">Good food, Good mood</Typography>
             <Box
               sx={{
                 width: "90%",
@@ -50,24 +39,8 @@ export const Hero = () => {
                 paddingBottom: "12px",
               }}
             >
-              <Typography
-                variant="body1"
-                sx={{
-                  color: theme.palette.Blue.main,
-                  fontFamily: "firesans",
-                }}
-              >
-                hello@goolifelores.mn
-              </Typography>
-              <Typography
-                variant="body1"
-                sx={{
-                  color: theme.palette.Blue.main,
-                  fontFamily: "firesans",
-                }}
-              >
-                +976 77102222
-              </Typography>
+              <Typography variant="body1">hello@goolifelores.mn</Typography>
+              <Typography variant="body1">+976 77102222</Typography>
             </Box>
           </Stack>
         </Stack>

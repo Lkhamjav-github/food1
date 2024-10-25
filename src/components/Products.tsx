@@ -21,16 +21,7 @@ export const Products = () => {
             maxWidth: "1300px",
           }}
         >
-          <Typography
-            variant="h4"
-            sx={{
-              fontWeight: "bold",
-              fontFamily: "firesans",
-              paddingBottom: 6,
-            }}
-          >
-            Our Products
-          </Typography>
+          <Typography variant="h4">Our Products</Typography>
           <Box
             sx={{
               display: "flex",
