@@ -18,7 +18,7 @@ export const Hero = () => {
               backgroundImage: "url('/goolifelores1.avif')",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center",
-              backgroundSize: { xl: "cover", xs: "bottom" },
+              backgroundSize: { xl: "cover", xs: "cover" },
             }}
           >
             <Box
@@ -27,7 +27,12 @@ export const Hero = () => {
               alt="logo"
               sx={{ width: "120px", height: "96px", mt: 4 }}
             />
-            <Typography variant="h1">Good food, Good mood</Typography>
+            <Typography
+              variant="h1"
+              fontSize={{ xs: "16px", sm: "24px", md: "48px" }}
+            >
+              Good food, Good mood
+            </Typography>
             <Box
               sx={{
                 width: "90%",

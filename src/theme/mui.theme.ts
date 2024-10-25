@@ -34,9 +34,7 @@ const theme = createTheme({
       fontWeight: "bold",
       color: "#08b89d",
       paddingTop: "24px",
-      fontSize: "48px",
-      "@media (max-width:960px)": { fontSize: "24px" },
-      "@media (max-width:600px)": { fontSize: "16px" },
+
     },
     caption: {
       color: "text.secondary",
